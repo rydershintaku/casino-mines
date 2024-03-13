@@ -9,8 +9,8 @@ import TileLogo from "@/public/assets/images/tile.png"
 import Head from 'next/head'
 import Background from '@/components/background-effect'
 export default function Game() {
-  const tile = useMemo(() => new Howl({ src: ["/assets/sounds/tile.mp3"], volume: 0.7, preload: true }), []);
-  const bomb = useMemo(() => new Howl({ src: ["/assets/sounds/bomb.mp3"], volume: 0.7, preload: true }), []);
+  const tile = useMemo(() => new Howl({ src: ["/assets/sounds/tile.mp3"], volume: 0.4, preload: true }), []);
+  const bomb = useMemo(() => new Howl({ src: ["/assets/sounds/bomb.mp3"], volume: 0.4, preload: true }), []);
   const [gameData, setGameData] = useState<{ mines: number[], isGameOver?: boolean }>({ mines: generateMines() })
   const [clickBlocks, setClickBlocks] = useState<number[]>([])
   const onCheckBlock = useCallback((i: number) => {
